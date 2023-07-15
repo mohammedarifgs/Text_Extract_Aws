@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./static/assets/favicon.ico" rel="icon">
+    <title>Text Extractor</title>
+      <link href="./static/main.3f6952e4.css" rel="stylesheet">
+
+  </head>
+
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <!--<li><a href="./works.html" title="">02 : Works</a></li>-->
+          <li><a href="./about.html" title="">02 : About </a></li>
+          <li><a href="./contact.html" title="">03 : Feedback</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+   <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/assets/images/aws.jpg');" >
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>Text,<br>
+                 <span id="typed-strings">
+                  <span>Extractor</span>
+                  <span>Web App</span>
+                  <!--<span>Amazon</span>-->
+                </span>
+                <span id="typed"></span>
+              </h1>
+                    <form method="POST" action="extract" enctype="multipart/form-data">
+                              <input  type="file" name="filename" id="file" />
+                             <button type="submit" id="button" >Extract here </button>
+                    </form>
+                <h3>PDF and JPEG Formats Supported Currently.</h3>
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     type();
+     movingBackgroundImage();
+  });
+</script>
+
+
+
+
+
+<script type="text/javascript" src="./static/main.70a66962.js"></script>
+
+    <!--<form
+      method="POST"
+      action="http://localhost:5000/extract"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="filename" />
+      <button type="submit" >Extract Image </button>
+    </form>
+    <h1 id="name"></h1>-->
+  </body>
+
+</html>

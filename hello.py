@@ -4,8 +4,8 @@ import json
 import csv
 
 
-textractclient = boto3.client("textract", aws_access_key_id="AKIASODT36CXC2DG3PWR",
-                              aws_secret_access_key="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", region_name="us-east-1")
+textractclient = boto3.client("textract", aws_access_key_id="xxxxxxxxxxxxxxxxxxx",
+                              aws_secret_access_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", region_name="us-east-1")
 
 
 app = Flask(__name__)
@@ -65,5 +65,5 @@ def submit_form():
         print(data)
         return redirect('/thankyou.html')
 
-
-app.run()
+if __name__ == '__main__':
+    app.run()

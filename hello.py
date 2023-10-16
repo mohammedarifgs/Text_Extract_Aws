@@ -3,8 +3,6 @@ import boto3
 import json
 import csv
 import fitz
-from pdf2image import convert_from_bytes
-import io
 
 textractclient = boto3.client("textract", aws_access_key_id="AKIASODT36CXC2DG3PWR",
                               aws_secret_access_key="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", region_name="us-east-1")

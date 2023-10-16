@@ -53,9 +53,13 @@
                 </span>
                 <span id="typed"></span>
               </h1>
-                    <form method="POST" action="extract" enctype="multipart/form-data">
+                    <form method="POST" action="extractImg" enctype="multipart/form-data">
                               <input  type="file" name="filename" id="file" />
                              <button type="submit" id="button" >Extract here </button>
+                    </form>
+                <form method="POST" action="extractPdf" enctype="multipart/form-data">
+                              <input  type="file" name="pdffilename" id="file2" />
+                             <button type="submit" id="button2" >Extract here </button>
                     </form>
                 <h3>PDF and JPEG Formats Supported Currently.</h3>
                 </div>

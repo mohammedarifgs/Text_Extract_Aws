@@ -52,7 +52,7 @@
                 </span>
                 <span id="typed"></span>
               </h1>
-                   <h3 id="name" ></h3>
+
 
                </div>
 
@@ -61,7 +61,19 @@
       </div>
     </div>
 </div>
-
+<div class="container">
+    <br>
+    <br>
+    <textarea   rows="20" cols="155" maxlength="524,288" id="name" ></textarea>
+    </div>
+    <div align="center">
+    <a href="/extract.txt"  download="extract.txt"><button>Download</button></a>
+    <br>
+    <br>
+    <p><b>download option is currently unavailable..</b></p>
+    <br>
+    <br>
+    </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
@@ -78,6 +90,7 @@
       }
       else{
       console.log(dataFromApi);
+      console.log("hello");
       document.querySelector("#name").innerHTML =dataFromApi.text
       }
 

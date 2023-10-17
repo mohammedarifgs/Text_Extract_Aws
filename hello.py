@@ -2,7 +2,8 @@ from flask import Flask, request, render_template, redirect
 import boto3
 import json
 import csv
-import fitz
+import PyPDF2, io
+
 
 textractclient = boto3.client("textract", aws_access_key_id="AKIASODT36CXC2DG3PWR",
                               aws_secret_access_key="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", region_name="us-east-1")
@@ -56,15 +57,13 @@ def extractpdf():
         pdf_data = file.read()
 
         # Open the PDF using PyMuPDF
-        pdf_document = fitz.open(stream=pdf_data, filetype="pdf")
+        pdf_reader = PyPDF2.PdfFileReader(io.BytesIO(pdf_data))
 
-        # Loop through each page in the PDF and print its text
-        for page_num in range(pdf_document.page_count):
-            page = pdf_document.load_page(page_num)
-            page_text += page.get_text() + "\n"
+        # Extract text from all pages
+        for page_num in range(pdf_reader.numPages):
+            page = pdf_reader.getPage(page_num)
+            page_text += page.extractText() + "\n"
 
-        # Don't forget to close the PDF document when you're done
-        pdf_document.close()
 
     responseJson = {
         "text": page_text
